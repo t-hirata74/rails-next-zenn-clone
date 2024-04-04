@@ -29,6 +29,7 @@ services:
   next:
     build:
       dockerfile: ./next/Dockerfile
+    command: bash -c "npm run dev"
     tty: true
     stdin_open: true
     volumes:
