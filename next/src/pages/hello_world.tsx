@@ -1,9 +1,14 @@
 import type { NextPage } from 'next'
+import SimpleButton from '@/components/SimpleButton'
 
 const HelloWorld: NextPage = () => {
-  const count = 100
-
-  return <div>Hello World! / {count}</div>
+  return (
+    <>
+      <h1>Title</h1>
+      <p>content</p>
+      <SimpleButton />
+    </>
+  )
 }
 
 export default HelloWorld
