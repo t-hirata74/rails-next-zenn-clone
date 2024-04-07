@@ -13,8 +13,8 @@ import * as React from 'react'
 import createEmotionCache from '@/styles/createEmotionCache'
 import theme from '@/styles/theme'
 
-export default class MyDocument extends Document {
   // _document.tsxはNext.jsで元々用意されているファイルです。サーバー側でのみレンダリングされ、静的なHTMLマークアップと初期データを生成するために使用されます。
+  export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="ja">
