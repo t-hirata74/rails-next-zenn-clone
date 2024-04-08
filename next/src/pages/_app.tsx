@@ -14,8 +14,8 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache
 }
 
-  // _app.tsxはNext.jsで元々用意されているファイルで、全ページで共通するレイアウトや状態を管理する役割を持っています。
-  export default function MyApp(props: MyAppProps): JSX.Element {
+// _app.tsxはNext.jsで元々用意されているファイルで、全ページで共通するレイアウトや状態を管理する役割を持っています。
+export default function MyApp(props: MyAppProps): JSX.Element {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
   return (
     <CacheProvider value={emotionCache}>
