@@ -6,7 +6,7 @@ import { useUserState, useSnackbarState } from '@/hooks/useGlobalState'
 const SignOut: NextPage = () => {
   const router = useRouter()
   const [, setUser] = useUserState()
-  const [, setSnackbar] = useSnackbarState()  
+  const [, setSnackbar] = useSnackbarState()
 
   useEffect(() => {
     localStorage.clear()

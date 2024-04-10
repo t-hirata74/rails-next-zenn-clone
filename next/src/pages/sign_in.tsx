@@ -115,14 +115,14 @@ const SignIn: NextPage = () => {
               />
             )}
           />
-           <LoadingButton
-             variant="contained"
-             type="submit"
-             loading={isLoading}
-             sx={{ fontWeight: 'bold', color: 'white' }}
-           >
-             送信する
-         </LoadingButton>
+          <LoadingButton
+            variant="contained"
+            type="submit"
+            loading={isLoading}
+            sx={{ fontWeight: 'bold', color: 'white' }}
+          >
+            送信する
+          </LoadingButton>
         </Stack>
       </Container>
     </Box>

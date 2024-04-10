@@ -54,7 +54,7 @@ const Header = () => {
       .catch((e: AxiosError<{ error: string }>) => {
         console.log(e.message)
       })
-   }
+  }
 
   return (
     <AppBar
@@ -118,44 +118,44 @@ const Header = () => {
                   </Link>
                 </Box>
               )}
-               {user.isSignedIn && (
-                 <Box sx={{ display: 'flex' }}>
-                   <IconButton onClick={handleClick} sx={{ p: 0 }}>
-                     <Avatar>
-                       <PersonIcon />
-                     </Avatar>
-                   </IconButton>
-                   <Box sx={{ ml: 2 }}>
-                     <Button
-                       color="primary"
-                       variant="contained"
-                       sx={{
-                         color: 'white',
-                         textTransform: 'none',
-                         fontSize: 16,
-                         borderRadius: 2,
-                         width: 100,
-                         boxShadow: 'none',
-                       }}
-                       onClick={addNewArticle}
-                     >
-                       Add new
-                     </Button>
-                   </Box>
-                   <Menu
-                     anchorEl={anchorEl}
-                     id="account-menu"
-                     open={open}
-                     onClose={handleClose}
-                     onClick={handleClose}
-                   >
-                     <Box sx={{ pl: 2, py: 1 }}>
-                       <Typography sx={{ fontWeight: 'bold' }}>
-                         {user.name}
-                       </Typography>
-                     </Box>
-                     <Divider />
-                     <Link href="/current/articles">
+              {user.isSignedIn && (
+                <Box sx={{ display: 'flex' }}>
+                  <IconButton onClick={handleClick} sx={{ p: 0 }}>
+                    <Avatar>
+                      <PersonIcon />
+                    </Avatar>
+                  </IconButton>
+                  <Box sx={{ ml: 2 }}>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      sx={{
+                        color: 'white',
+                        textTransform: 'none',
+                        fontSize: 16,
+                        borderRadius: 2,
+                        width: 100,
+                        boxShadow: 'none',
+                      }}
+                      onClick={addNewArticle}
+                    >
+                      Add new
+                    </Button>
+                  </Box>
+                  <Menu
+                    anchorEl={anchorEl}
+                    id="account-menu"
+                    open={open}
+                    onClose={handleClose}
+                    onClick={handleClose}
+                  >
+                    <Box sx={{ pl: 2, py: 1 }}>
+                      <Typography sx={{ fontWeight: 'bold' }}>
+                        {user.name}
+                      </Typography>
+                    </Box>
+                    <Divider />
+                    <Link href="/current/articles">
                       <MenuItem>
                         <ListItemIcon>
                           <ArticleIcon fontSize="small" />
@@ -163,17 +163,17 @@ const Header = () => {
                         記事の管理
                       </MenuItem>
                     </Link>
-                     <Link href="/sign_out">
-                       <MenuItem>
-                         <ListItemIcon>
-                           <Logout fontSize="small" />
-                         </ListItemIcon>
-                         サインアウト
-                       </MenuItem>
-                     </Link>
-                   </Menu>
-                 </Box>
-               )}
+                    <Link href="/sign_out">
+                      <MenuItem>
+                        <ListItemIcon>
+                          <Logout fontSize="small" />
+                        </ListItemIcon>
+                        サインアウト
+                      </MenuItem>
+                    </Link>
+                  </Menu>
+                </Box>
+              )}
             </>
           )}
         </Box>
