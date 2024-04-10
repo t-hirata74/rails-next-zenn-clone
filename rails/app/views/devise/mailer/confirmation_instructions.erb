@@ -1,0 +1,9 @@
+<!-- 
+  devise_token_authの認証メール文面のデフォルトからオーバーラップする
+  https://github.com/lynndylanhurley/devise_token_auth/blob/master/app/views/devise/mailer/confirmation_instructions.html.erb 
+-->
+<p><%= t(:welcome).capitalize + ' ' + @email %>!</p>
+
+<p><%= t '.confirm_link_msg' %> </p>
+
+<p><%= link_to t('.confirm_account_link'), "#{Settings.front_domain}/confirmation?confirmation_token=#{@token}", target: :_blank, rel: "noopener noreferrer" %></p>
