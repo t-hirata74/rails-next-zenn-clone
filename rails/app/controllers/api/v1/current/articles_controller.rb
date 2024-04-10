@@ -1,6 +1,6 @@
 class Api::V1::Current::ArticlesController < Api::V1::BaseController
   before_action :authenticate_user!
- 
+
   def index
     articles = current_user.articles.not_unsaved.order(created_at: :desc)
     render json: articles
@@ -24,7 +24,7 @@ class Api::V1::Current::ArticlesController < Api::V1::BaseController
 
   private
 
-  def article_params
-    params.require(:article).permit(:title, :content, :status)
-  end
- end
+    def article_params
+      params.require(:article).permit(:title, :content, :status)
+    end
+end

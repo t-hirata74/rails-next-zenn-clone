@@ -11,7 +11,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
     resource "*",
              headers: :any,
-             expose: ['access-token', 'uid','client'], # 認証情報をNext.js側で取得できるようにする
+             expose: ["access-token", "uid", "client"], # 認証情報をNext.js側で取得できるようにする
              methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
