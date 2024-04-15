@@ -1,3 +1,5 @@
+# MEMO: docker build -t zenn-clone-rails -f ./rails/Dockerfile.prod ./rails
+
 FROM --platform=linux/x86_64 ruby:3.1.2
 
 ENV LANG C.UTF-8

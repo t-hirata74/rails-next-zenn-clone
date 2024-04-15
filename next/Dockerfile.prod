@@ -1,3 +1,5 @@
+# MEMO: docker build -t zenn-clone-next -f ./next/Dockerfile.prod ./next
+
 # --- Build Stage ---
   FROM --platform=linux/x86_64 node:19.4.0 AS builder
 
