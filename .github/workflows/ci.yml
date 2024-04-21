@@ -5,6 +5,11 @@ name: Continuous Integration
 # ブランチへの push 時
 on:
   push:
+    # こちらの方で除外設定を行わないとCIワークフローが二重で回ってしまうから
+    branches-ignore:
+      - "main"
+  # 他のワークフローから呼び出された時に動作させる(これによってCDワークフロー.github/workflows/cd.ymlの方からこちらのワークフローを呼び出すことができるようになる)
+  workflow_call:
 
 # 当 workflow が行う処理
 jobs:
